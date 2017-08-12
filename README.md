@@ -1,8 +1,6 @@
 # AutoBright
 ### Scheduled DDC/CI display dimming for Windows
 
-Lowers display backlight during night hours.
-
 ## Features
 - Live scheduling based on civil twilight times at a given location (times provided by sunrise-sunset.org)
 - Support for up to 3 displays (easily expandable)
