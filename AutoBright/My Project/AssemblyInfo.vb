@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitle("AutoBright")>
 <Assembly: AssemblyDescription("Automatic display backlight dimming using DDC commands")>
 <Assembly: AssemblyCompany("James Tattersall")>
-<Assembly: AssemblyProduct("AutoBright Beta 2.3")>
+<Assembly: AssemblyProduct("AutoBright 2.3.0")>
 <Assembly: AssemblyCopyright("Copyright ©  James Tattersall 2017")>
 <Assembly: AssemblyTrademark("")>
 
@@ -32,4 +32,4 @@ Imports System.Runtime.InteropServices
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
 <Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyFileVersion("2.3.0.0")>
