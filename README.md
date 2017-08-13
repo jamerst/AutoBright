@@ -11,3 +11,8 @@
 - Monitors must support DDC/CI properly. Some can be a bit odd, or just not support it at all.
 - Monitor support for DDC/CI cannot be checked - there is a bug in the Windows API that returns false results for checking support. *Thanks Microsoft*
 - Brightness settings are not tied to specific monitors, the settings are tied to the current monitor number recognized by the system.
+
+## Attributions
+- DDC/CI control provided by [BrightnessControl](https://github.com/alexhorn/BrightnessControl)
+- Scheduling times provided by [sunrise-sunset.org](https://sunrise-sunset.org/)'s free API.
+- Special thanks to IronRazer of the DreamInCode forums for assistance with the implementation of BrightnessControl.
