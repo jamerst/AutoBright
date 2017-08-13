@@ -12,6 +12,9 @@
 - Monitor support for DDC/CI cannot be checked as there is a bug in the Windows API that returns false results for checking support. *Thanks Microsoft*
 - Brightness settings are not tied to specific monitors, the settings are tied to the current monitor number recognized by the system.
 
+## Download
+Downloads can be found [here](https://github.com/jamerst/AutoBright/releases)
+
 ## Attributions
 - DDC/CI control provided by [BrightnessControl](https://github.com/alexhorn/BrightnessControl).
 - Scheduling times provided by [sunrise-sunset.org](https://sunrise-sunset.org/)'s free API.
