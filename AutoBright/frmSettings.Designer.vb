@@ -27,7 +27,7 @@ Partial Class frmSettings
         Me.TransitionDownTimer1 = New System.Windows.Forms.Timer(Me.components)
         Me.NotificationTrayIcon = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.NotificationTrayContext = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TitleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -57,6 +57,7 @@ Partial Class frmSettings
         Me.tBarScreen3Dimmed = New System.Windows.Forms.TrackBar()
         Me.tBarScreen3Normal = New System.Windows.Forms.TrackBar()
         Me.gBoxOptions = New System.Windows.Forms.GroupBox()
+        Me.btnAdvanced = New System.Windows.Forms.Button()
         Me.tBoxOffset = New System.Windows.Forms.TextBox()
         Me.lblOffset = New System.Windows.Forms.Label()
         Me.tBoxTransitionTime = New System.Windows.Forms.TextBox()
@@ -84,7 +85,6 @@ Partial Class frmSettings
         Me.lblScreen2Brightness = New System.Windows.Forms.Label()
         Me.lblScreen1Brightness = New System.Windows.Forms.Label()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.btnAdvanced = New System.Windows.Forms.Button()
         Me.NotificationTrayContext.SuspendLayout()
         Me.gBoxScreen1.SuspendLayout()
         CType(Me.tBarScreen1Dimmed, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -113,39 +113,39 @@ Partial Class frmSettings
         '
         'NotificationTrayContext
         '
-        Me.NotificationTrayContext.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.ToolStripSeparator1, Me.SettingsToolStripMenuItem, Me.DisableToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.NotificationTrayContext.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TitleToolStripMenuItem, Me.ToolStripSeparator1, Me.SettingsToolStripMenuItem, Me.DisableToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.NotificationTrayContext.Name = "NotificationTrayContect"
         Me.NotificationTrayContext.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.NotificationTrayContext.Size = New System.Drawing.Size(133, 98)
+        Me.NotificationTrayContext.Size = New System.Drawing.Size(153, 120)
         '
-        'ToolStripMenuItem1
+        'TitleToolStripMenuItem
         '
-        Me.ToolStripMenuItem1.Image = Global.AutoBright.My.Resources.Resources.AutoBrightIdle1
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(132, 22)
-        Me.ToolStripMenuItem1.Text = "AutoBright"
+        Me.TitleToolStripMenuItem.Image = Global.AutoBright.My.Resources.Resources.AutoBrightIdle1
+        Me.TitleToolStripMenuItem.Name = "TitleToolStripMenuItem"
+        Me.TitleToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TitleToolStripMenuItem.Text = "AutoBright"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(129, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
         '
         'SettingsToolStripMenuItem
         '
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'DisableToolStripMenuItem
         '
         Me.DisableToolStripMenuItem.Name = "DisableToolStripMenuItem"
-        Me.DisableToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.DisableToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.DisableToolStripMenuItem.Text = "Disable"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'gBoxScreen1
@@ -429,6 +429,15 @@ Partial Class frmSettings
         Me.gBoxOptions.TabStop = False
         Me.gBoxOptions.Text = "Options"
         '
+        'btnAdvanced
+        '
+        Me.btnAdvanced.Location = New System.Drawing.Point(10, 63)
+        Me.btnAdvanced.Name = "btnAdvanced"
+        Me.btnAdvanced.Size = New System.Drawing.Size(75, 23)
+        Me.btnAdvanced.TabIndex = 13
+        Me.btnAdvanced.Text = "Advanced"
+        Me.btnAdvanced.UseVisualStyleBackColor = True
+        '
         'tBoxOffset
         '
         Me.tBoxOffset.Location = New System.Drawing.Point(143, 37)
@@ -639,16 +648,7 @@ Partial Class frmSettings
         Me.lblScreen1Brightness.TabIndex = 32
         Me.lblScreen1Brightness.Text = "Screen 1 Current Brightness:"
         '
-        'btnAdvanced
-        '
-        Me.btnAdvanced.Location = New System.Drawing.Point(10, 63)
-        Me.btnAdvanced.Name = "btnAdvanced"
-        Me.btnAdvanced.Size = New System.Drawing.Size(75, 23)
-        Me.btnAdvanced.TabIndex = 13
-        Me.btnAdvanced.Text = "Advanced"
-        Me.btnAdvanced.UseVisualStyleBackColor = True
-        '
-        'appSettings
+        'frmSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -666,7 +666,7 @@ Partial Class frmSettings
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "appSettings"
+        Me.Name = "frmSettings"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AutoBright Settings"
@@ -730,7 +730,7 @@ Partial Class frmSettings
     Friend WithEvents DisableToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents TitleToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents btnAbout As Button
     Friend WithEvents gBoxLocation As GroupBox
     Friend WithEvents tBoxLatitude As TextBox

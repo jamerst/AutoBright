@@ -51,10 +51,10 @@ Partial Class frmAbout
         Me.lblChangelog.Location = New System.Drawing.Point(12, 56)
         Me.lblChangelog.MaximumSize = New System.Drawing.Size(250, 0)
         Me.lblChangelog.Name = "lblChangelog"
-        Me.lblChangelog.Size = New System.Drawing.Size(246, 65)
+        Me.lblChangelog.Size = New System.Drawing.Size(244, 39)
         Me.lblChangelog.TabIndex = 28
-        Me.lblChangelog.Text = "Changelog:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Added option to launch external program when dimming" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Fixed window ap" &
-    "pearing in task manager and task switcher when not open"
+        Me.lblChangelog.Text = "Changelog:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Fixed external program not being terminated when disabled via context" &
+    " menu"
         '
         'lblVer
         '
@@ -64,7 +64,7 @@ Partial Class frmAbout
         Me.lblVer.Name = "lblVer"
         Me.lblVer.Size = New System.Drawing.Size(69, 13)
         Me.lblVer.TabIndex = 27
-        Me.lblVer.Text = "Version 2.3.0"
+        Me.lblVer.Text = "Version 2.3.1"
         Me.lblVer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblTitle

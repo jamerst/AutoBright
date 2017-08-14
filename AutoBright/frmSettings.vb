@@ -778,6 +778,7 @@ Public Class frmSettings
         DisableToolStripMenuItem.Checked = Not DisableToolStripMenuItem.Checked
         If DisableToolStripMenuItem.Checked = True Then
             DisableTimers()
+            EndExternalProgram()
             Select Case PhysicalMonitors.Length
                 Case 1
                     SetBrightness(My.Settings.Screen1Normal, 1)
@@ -830,6 +831,7 @@ Public Class frmSettings
 
     Private Sub StartExternalProgram()
         Debug.WriteLine("INFO: Starting external program")
+        externalProgramRunning = True
         Dim externalProgram = New Process
         externalProgram.StartInfo = New ProcessStartInfo() With {
         .WorkingDirectory = IO.Path.GetDirectoryName(My.Settings.ExternalProgramPath),
@@ -841,6 +843,7 @@ Public Class frmSettings
 
     Private Sub EndExternalProgram()
         Debug.WriteLine("INFO: Killing background process")
+        externalProgramRunning = False
         Dim processKiller = New Process
         processKiller.StartInfo = New ProcessStartInfo() With {
             .WorkingDirectory = "C:\Windows\system32",
