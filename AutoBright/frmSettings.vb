@@ -57,13 +57,14 @@ Public Class frmSettings
             My.Settings.CivilTwilightEndToday = DateTime.Parse(Mid(todayTimesJSON, 172, 25)) 'Extract civil twilight end time for today and convert to DateTime
             My.Settings.CivilTwilightEndTomorrow = DateTime.Parse(Mid(tomorrowTimesJSON, 172, 25)) 'Extract civil twilight start time for tomorrow and convert to DateTime
             My.Settings.CivilTwilightStartToday = DateTime.Parse(Mid(todayTimesJSON, 221, 25)) 'Extract civil twilight end time and convert to DateTime
+            My.Settings.Save()
 
             lblEndTime.ForeColor = Color.Black
             lblStartTime.ForeColor = Color.Black
             'Reset colours
         Catch ex As Exception 'If fails, use last saved times
             Debug.WriteLine("ERROR: Time fetching failed, using stored times instead")
-            Dim difference As Integer = DateDiff(DateInterval.Day, My.Settings.CivilTwilightStartToday, Date.Now) 'Get difference in days between last saved and present
+            Dim difference As Integer = DateDiff(DateInterval.Day, My.Settings.CivilTwilightEndToday, Date.Now) 'Get difference in days between last saved and present
 
             NotificationTrayIcon.BalloonTipIcon = ToolTipIcon.Error
             NotificationTrayIcon.BalloonTipTitle = "AutoBright - Time Fetch Failed"
@@ -71,9 +72,9 @@ Public Class frmSettings
             NotificationTrayIcon.ShowBalloonTip(7000)
             'Display balloon notification alert
 
-            My.Settings.CivilTwilightEndToday.AddDays(difference)
-            My.Settings.CivilTwilightStartToday.AddDays(difference)
-            My.Settings.CivilTwilightEndTomorrow.AddDays(difference)
+            My.Settings.CivilTwilightEndToday = My.Settings.CivilTwilightEndToday.AddDays(difference)
+            My.Settings.CivilTwilightStartToday = My.Settings.CivilTwilightStartToday.AddDays(difference)
+            My.Settings.CivilTwilightEndTomorrow = My.Settings.CivilTwilightEndTomorrow.AddDays(difference)
             'Add difference in days to bring date to present
 
             NotificationTrayIcon.BalloonTipIcon = ToolTipIcon.None

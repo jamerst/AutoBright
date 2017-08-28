@@ -51,10 +51,9 @@ Partial Class frmAbout
         Me.lblChangelog.Location = New System.Drawing.Point(12, 56)
         Me.lblChangelog.MaximumSize = New System.Drawing.Size(250, 0)
         Me.lblChangelog.Name = "lblChangelog"
-        Me.lblChangelog.Size = New System.Drawing.Size(244, 39)
+        Me.lblChangelog.Size = New System.Drawing.Size(246, 39)
         Me.lblChangelog.TabIndex = 28
-        Me.lblChangelog.Text = "Changelog:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Fixed external program not being terminated when disabled via context" &
-    " menu"
+        Me.lblChangelog.Text = "Changelog:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Fixed reusing of previous times when time fetching fails"
         '
         'lblVer
         '
@@ -64,7 +63,7 @@ Partial Class frmAbout
         Me.lblVer.Name = "lblVer"
         Me.lblVer.Size = New System.Drawing.Size(69, 13)
         Me.lblVer.TabIndex = 27
-        Me.lblVer.Text = "Version 2.3.1"
+        Me.lblVer.Text = "Version 2.3.2"
         Me.lblVer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblTitle
