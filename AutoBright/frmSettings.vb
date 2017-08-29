@@ -89,7 +89,6 @@ Public Class frmSettings
             dimmingDownStart = My.Settings.CivilTwilightStartToday.AddMinutes(-1 * My.Settings.TransitionTime + My.Settings.Offset)
             dimmingDownEnd = dimmingDownStart.AddMinutes(My.Settings.TransitionTime) 'Calculate times for start and end of day->night transition
 
-
             dimmingUpStart = My.Settings.CivilTwilightEndTomorrow.AddMinutes(-1 * My.Settings.TransitionTime + -1 * My.Settings.Offset)
             dimmingUpEnd = dimmingUpStart.AddMinutes(My.Settings.TransitionTime) 'Calculate times for start and end of night->day transition
 
