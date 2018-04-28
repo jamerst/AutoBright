@@ -1,4 +1,4 @@
-# AutoBright
+# AutoBright  ![GitHub release](https://img.shields.io/github/release/jamerst/AutoBright.svg)![GitHub release](https://img.shields.io/github/downloads/jamerst/AutoBright/total.svg)
 ### Scheduled DDC/CI display dimming for Windows
 
 ## Features
