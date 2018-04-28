@@ -1,5 +1,5 @@
-# AutoBright  ![GitHub release](https://img.shields.io/github/release/jamerst/AutoBright.svg)![GitHub release](https://img.shields.io/github/downloads/jamerst/AutoBright/total.svg)
-### Scheduled DDC/CI display dimming for Windows
+# AutoBright  [![GitHub release](https://img.shields.io/github/release/jamerst/AutoBright.svg)](https://github.com/jamerst/AutoBright/releases) [![GitHub release](https://img.shields.io/github/downloads/jamerst/AutoBright/total.svg)
+### Scheduled DDC/CI display dimming for Windows](https://github.com/jamerst/AutoBright/releases)
 
 ## Features
 - Live scheduling based on civil twilight times at a given location
